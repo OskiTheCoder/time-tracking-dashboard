@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "sidebar work play study"
+    "sidebar exercise social selfcare";
+  grid-gap: 25px;
+  margin: 0 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  width: 325px;
+}
+
+.profile {
+  background-color: hsl(246, 80%, 60%);
+  height: 70%;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  border: 3px solid white;
+  margin: 50px 0 0 30px;
+}
+
+.profile-subtext {
+  margin: 0 0 50px 30px;
+}
+
+.subtext,
+.first-name,
+.last-name {
+  display: block;
+  padding-bottom: 2px;
+}
+
+.subtext {
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+.first-name,
+.last-name {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.button-group {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px 0;
+  margin-left: 30px;
+}
+
+button {
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card--work,
+.card--play,
+.card--study,
+.card--exercise,
+.card--social,
+.card--selfcare {
+  height: 250px;
+  width: 325px;
+  border-radius: 15px;
+}
+
+.card--work {
+  grid-area: work;
+  background-color: hsl(15, 100%, 70%);
+}
+
+.card--play {
+  grid-area: play;
+  background-color: hsl(195, 74%, 62%);
+}
+
+.card--study {
+  grid-area: study;
+  background-color: hsl(348, 100%, 68%);
+}
+
+.card--exercise {
+  grid-area: exercise;
+  background-color: hsl(145, 58%, 55%);
+}
+
+.card--social {
+  grid-area: social;
+  background-color: hsl(264, 64%, 52%);
+}
+
+.card--selfcare {
+  grid-area: selfcare;
+  background-color: hsl(43, 84%, 65%);
+}
+
+.card--icon {
+  height: 22%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  height: 82px;
+  width: 82px;
+}
+
+.card--details {
+  height: 78%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0px 30px 40px;
+}
+
+.card--details:hover {
+  background-color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 35px;
+}
+
+.ellipsis {
+  height: 6px;
+  width: 20px;
+  opacity: 0.6;
+}
+
+.ellipsis:hover {
+  opacity: 1;
+}
+
+.activity {
+  font-weight: 500;
+}
+
+.current {
+  margin-top: 15px;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.previous {
+  margin-top: 5px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1450px) {
+  .sidebar {
+    width: 250px;
+    height: 425px;
+  }
+
+  .profile-img {
+    height: 75px;
+    width: 75px;
+    margin: 30px 0 0 30px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  .first-name,
+  .last-name {
+    font-size: 40px;
+  }
+
+  button {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .card--work,
+  .card--play,
+  .card--study,
+  .card--exercise,
+  .card--social,
+  .card--selfcare {
+    height: 200px;
+    width: 250px;
+  }
+
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .card--details {
+    height: 78%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0px 15px 30px;
+  }
+
+  .current {
+    margin-top: 8px;
+    font-size: 50px;
+  }
+
+  .previous {
+    margin-top: 3px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "sidebar"
+      "work"
+      "play"
+      "study"
+      "exercise"
+      "social"
+      "selfcare";
+    grid-gap: 30px;
+    margin: 20px 10px;
+  }
+
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 3px solid white;
+    margin: 0;
+  }
+
+  .profile-subtext {
+    padding-top: 45px;
+  }
+
+  .subtext {
+    display: block;
+    padding-bottom: 2px;
+  }
+
+  .subtext {
+    opacity: 0.7;
+    font-size: 16px;
+  }
+
+  .first-name,
+  .last-name {
+    display: inline-block;
+    font-size: 30px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 0;
+  }
+
+  .card--details {
+    height: 78%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: inherit;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 30px 0px 0px 40px;
+  }
+
+  .current,
+  .previous {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .current {
+    left: 0;
+    margin: 0px 0px 20px 35px;
+  }
+
+  .previous {
+    right: 0;
+    margin: 0px 35px 37px 0px;
+  }
+
+  .sidebar,
+  .card--work,
+  .card--play,
+  .card--study,
+  .card--exercise,
+  .card--social,
+  .card--selfcare {
+    height: 225px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .profile-img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .subtext {
+    font-size: 12px;
+  }
+
+  .first-name,
+  .last-name {
+    font-size: 23px;
+  }
+
+  .current {
+    font-size: 35px;
+    margin: 0px 0px 36px 35px;
+  }
+
+  .previous {
+    font-size: 12px;
+    margin: 0px 35px 47px 0px;
+  }
+
+  .sidebar,
+  .card--work,
+  .card--play,
+  .card--study,
+  .card--exercise,
+  .card--social,
+  .card--selfcare {
+    height: 200px;
+    width: 310px;
+  }
+}
