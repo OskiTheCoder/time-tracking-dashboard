@@ -1,3 +1,3 @@
 # Frontend Mentor - Time tracking dashboard
 
-Live preview -
+Live preview - https://oskithecoder.github.io/time-tracking-dashboard/
